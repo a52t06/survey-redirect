@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>正在導向問卷...</title>
+  <script>
+    const positiveURL = "https://www.surveycake.com/s/x0VyW";
+    const negativeURL = "https://www.surveycake.com/s/KXV8Y";
+
+    // 隨機數產生：50% 機率導向兩組
+    const random = Math.random();
+    if (random < 0.5) {
+      window.location.href = positiveURL;
+    } else {
+      window.location.href = negativeURL;
+    }
+  </script>
+</head>
+<body>
+  <h2>正在為你導向問卷，請稍候...</h2>
+</body>
+</html>
