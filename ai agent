@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>研究分流中，請稍候...</title>
+    <script>
+        // 請將下方的連結換成妳那 4 份 Google 表單的正式網址
+        var surveys = [
+            "https://forms.gle/3sTjFpziwvkDV4NM7",
+            "https://forms.gle/VfdR2qz9ej8cQVgC6",
+            "https://forms.gle/ZQPCtrgSLd359jx8A",
+            "https://forms.gle/cYk2kZJjggjpRUZ96"
+        ];
+        
+        // 隨機選取一個索引
+        var randomIndex = Math.floor(Math.random() * surveys.length);
+        
+        // 執行跳轉
+        window.location.replace(surveys[randomIndex]);
+    </script>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+        <p>正在為您隨機分配實驗小組，請稍候...</p>
+        <p>若長時間未跳轉，請點擊 <a id="fallback" href="#">此處</a></p>
+    </div>
+    <script>
+        // 防呆機制：若自動跳轉失敗，提供手動點擊連結
+        document.getElementById('fallback').href = surveys[randomIndex];
+    </script>
+</body>
+</html>
